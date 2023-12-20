@@ -1,0 +1,20 @@
+import random
+
+def yarat_siyahi(n):
+    return [random.randint(1, 5) for _ in range(n)]
+
+def vur_ve_yarat(siyahi):
+    return [elem * 4 for elem in siyahi]
+
+def cem_10_dan_boyuk(siyahi):
+    return sum([elem for elem in siyahi if elem > 10])
+
+# Test üçün
+n = 10 
+siyahi = yarat_siyahi(n)
+yenisi = vur_ve_yarat(siyahi)
+cem = cem_10_dan_boyuk(yenisi)
+
+print("Orijinal siyahı:", siyahi)
+print("Yeni siyahı (4-ə vurulmuş):", yenisi)
+print("10-dan böyük elementlərin cəmi:", cem)
